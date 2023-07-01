@@ -1,12 +1,12 @@
 /* Primary */
 $light-red: hsl(0, 100%, 67%);
-$light-red-background: hsl(0, 100%, 97%);
+$light-red-background: hsl(0, 100%, 98%);
 $orangey-yellow: hsl(39, 100%, 56%);
-$orangey-yellow-background: hsl(39, 100%, 97%);
+$orangey-yellow-background: hsl(39, 100%, 98%);
 $green-teal: hsl(166, 100%, 37%);
-$green-teal-background: hsl(166, 100%, 97%);
+$green-teal-background: hsl(166, 100%, 98%);
 $cobalt-blue: hsl(234, 85%, 45%);
-$cobalt-blue-background: hsl(234, 85%, 97%);
+$cobalt-blue-background: hsl(234, 85%, 98%);
 
 /* Gradients */
 $light-slate-blue-background: hsl(252, 100%, 67%);
@@ -21,15 +21,20 @@ $pale-blue: hsl(221, 100%, 96%);
 $light-lavender: hsl(241, 100%, 89%);
 $dark-gray-blue: hsl(224, 30%, 27%);
 
+@font-face {
+    font-family: 'Hanken Grotesk';
+    src: url('./assets/fonts/HankenGrotesk-VariableFont_wght.ttf');
+}
+
 * {
     box-sizing: border-box;
+    font-family: 'Hanken Grotesk';
+    margin: 0px;
+    padding: 0px;
 }
 
 body {
-    margin: 0px;
-    padding: 0px;
     box-sizing: border-box;
-    font-family: 'Hanken Grotesk';
     
     display: flex;
     justify-content: center;
@@ -48,63 +53,69 @@ p {
     background-color: $white;
     display: flex;
     width: 740px;
-    height: 510px;
-    
+    height: 515px;
+    box-shadow: 10px 10px 40px -15px $light-lavender;
+    border-radius: 25px;
+
     .result-container {
         background: linear-gradient(0, $light-royal-blue-background, $light-slate-blue-background);
         display: flex;
         flex-direction: column;
-        justify-content: center;
         align-items: center;
-        border-radius: 25px;
+        border-radius: 30px;
         color: $light-lavender;
-        padding: 45px 60px 60px;
+        padding: 40px 60px 55px;
         text-align: center;
         width: 50%;
 
         .result-header {
             margin-top: 0;
-            margin-bottom: 10px;
+            font-size: 24px;
+            font-weight: 600;
         }
 
         .overall-score {
             display: flex;
             flex-direction: column;
-            align-items: center;
             justify-content: center;
-            background: linear-gradient(0, $persian-blue-circle, $violet-blue-circle);
+            background: linear-gradient(0, hsla(241, 72%, 46%, 0), hsl(256, 72%, 46%));
             border-radius: 100%;
             width: 200px;
-            aspect-ratio: 1;
-            padding: 60px;
-            margin-block: 35px;
-
+            height: 200px;
+            font-size: 18px;
+            margin-top: 35px;
+            margin-bottom: 15px;
+            
             .score {
                 color: $white;
-                font-size: 60px;
+                font-size: 70px;
                 line-height: 60px;
-                font-weight: 700;
+                margin-block: 15px 10px;
+                font-weight: 900;
             }
         }
 
         .result-greeting {
             color: $white;
-            font-size: 25px;
-            margin-bottom: 30px;
-        }
-
-        .result-summary {
-            font-size: 15px;
+            font-size: 31px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            margin-block: 15px;
         }
     }
 
     .summary-container {
         width: 50%;
-        padding: 45px 40px;
+        padding: 40px 40px 45px;
+        border-radius: 25px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
 
         .summary-header {
             margin: 0;
-            margin-bottom: 30px;
+            font-size: 24px;
+            font-weight: 700;
         }
 
         .parameters-list {
@@ -113,21 +124,22 @@ p {
             justify-content: center;
             align-items: center;
             gap: 15px;
+            margin-block: 30px 40px;
 
             .tile {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
-                padding: 20px;
+                padding: 17px 20px 17px 15px;
                 width: 100%;
-                border-radius: 15px;
+                border-radius: 10px;
 
                 .parameter-label {
-                    font-weight: 900;
+                    font-weight: 700;
                     display: flex;
 
                     img {
-                        margin-right: 15px;
+                        margin-right: 13px;
                     }
                 }
 
@@ -135,10 +147,11 @@ p {
                     .score {
                         font-weight: 700;
                         color: #000;
-                        margin-right: 5px;
+                        margin-right: 4px;
                     }
                     .out-of {
                         color: $light-lavender;
+                        font-weight: 700;
                     }
                 }
 
@@ -160,11 +173,29 @@ p {
                 }
             }
         }
+
+        .continue-button {
+            border-radius: 60px;
+            border: none;
+            width: 100%;
+            font-size: 18px;
+            background-color: $dark-gray-blue;
+            color: $white;
+            padding-block: 17px;
+            cursor: pointer;
+            font-weight: 500;
+
+            &:hover {
+                background: linear-gradient(0, $light-royal-blue-background, $light-slate-blue-background);
+            }
+        }
     }
 }
 
 
 
 .attribution { font-size: 11px; text-align: center; 
+    bottom: 5px;
+    position: absolute;
     a { color: hsl(228, 45%, 44%); }
 }

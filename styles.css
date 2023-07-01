@@ -1,15 +1,19 @@
 /* Primary */
 /* Gradients */
 /* Neutral */
+@font-face {
+  font-family: "Hanken Grotesk";
+  src: url("./assets/fonts/HankenGrotesk-VariableFont_wght.ttf");
+}
 * {
   box-sizing: border-box;
+  font-family: "Hanken Grotesk";
+  margin: 0px;
+  padding: 0px;
 }
 
 body {
-  margin: 0px;
-  padding: 0px;
   box-sizing: border-box;
-  font-family: "Hanken Grotesk";
   display: flex;
   justify-content: center;
   align-items: center;
@@ -26,57 +30,64 @@ p {
   background-color: hsl(0, 0%, 100%);
   display: flex;
   width: 740px;
-  height: 510px;
+  height: 515px;
+  box-shadow: 10px 10px 40px -15px hsl(241, 100%, 89%);
+  border-radius: 25px;
 }
 .main-container .result-container {
   background: linear-gradient(0, hsl(241, 81%, 54%), hsl(252, 100%, 67%));
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  border-radius: 25px;
+  border-radius: 30px;
   color: hsl(241, 100%, 89%);
-  padding: 45px 60px 60px;
+  padding: 40px 60px 55px;
   text-align: center;
   width: 50%;
 }
 .main-container .result-container .result-header {
   margin-top: 0;
-  margin-bottom: 10px;
+  font-size: 24px;
+  font-weight: 600;
 }
 .main-container .result-container .overall-score {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
   background: linear-gradient(0, hsla(241, 72%, 46%, 0), hsl(256, 72%, 46%));
   border-radius: 100%;
   width: 200px;
-  aspect-ratio: 1;
-  padding: 60px;
-  margin-block: 35px;
+  height: 200px;
+  font-size: 18px;
+  margin-top: 35px;
+  margin-bottom: 15px;
 }
 .main-container .result-container .overall-score .score {
   color: hsl(0, 0%, 100%);
-  font-size: 60px;
+  font-size: 70px;
   line-height: 60px;
-  font-weight: 700;
+  margin-block: 15px 10px;
+  font-weight: 900;
 }
 .main-container .result-container .result-greeting {
   color: hsl(0, 0%, 100%);
-  font-size: 25px;
-  margin-bottom: 30px;
-}
-.main-container .result-container .result-summary {
-  font-size: 15px;
+  font-size: 31px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-block: 15px;
 }
 .main-container .summary-container {
   width: 50%;
-  padding: 45px 40px;
+  padding: 40px 40px 45px;
+  border-radius: 25px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
 }
 .main-container .summary-container .summary-header {
   margin: 0;
-  margin-bottom: 30px;
+  font-size: 24px;
+  font-weight: 700;
 }
 .main-container .summary-container .parameters-list {
   display: flex;
@@ -84,50 +95,68 @@ p {
   justify-content: center;
   align-items: center;
   gap: 15px;
+  margin-block: 30px 40px;
 }
 .main-container .summary-container .parameters-list .tile {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
+  padding: 17px 20px 17px 15px;
   width: 100%;
-  border-radius: 15px;
+  border-radius: 10px;
 }
 .main-container .summary-container .parameters-list .tile .parameter-label {
-  font-weight: 900;
+  font-weight: 700;
   display: flex;
 }
 .main-container .summary-container .parameters-list .tile .parameter-label img {
-  margin-right: 15px;
+  margin-right: 13px;
 }
 .main-container .summary-container .parameters-list .tile .parameter-score .score {
   font-weight: 700;
   color: #000;
-  margin-right: 5px;
+  margin-right: 4px;
 }
 .main-container .summary-container .parameters-list .tile .parameter-score .out-of {
   color: hsl(241, 100%, 89%);
+  font-weight: 700;
 }
 .main-container .summary-container .parameters-list .tile.reaction {
   color: hsl(0, 100%, 67%);
-  background-color: hsl(0, 100%, 97%);
+  background-color: hsl(0, 100%, 98%);
 }
 .main-container .summary-container .parameters-list .tile.memory {
   color: hsl(39, 100%, 56%);
-  background-color: hsl(39, 100%, 97%);
+  background-color: hsl(39, 100%, 98%);
 }
 .main-container .summary-container .parameters-list .tile.verbal {
   color: hsl(166, 100%, 37%);
-  background-color: hsl(166, 100%, 97%);
+  background-color: hsl(166, 100%, 98%);
 }
 .main-container .summary-container .parameters-list .tile.visual {
   color: hsl(234, 85%, 45%);
-  background-color: hsl(234, 85%, 97%);
+  background-color: hsl(234, 85%, 98%);
+}
+.main-container .summary-container .continue-button {
+  border-radius: 60px;
+  border: none;
+  width: 100%;
+  font-size: 18px;
+  background-color: hsl(224, 30%, 27%);
+  color: hsl(0, 0%, 100%);
+  padding-block: 17px;
+  cursor: pointer;
+  font-weight: 500;
+}
+.main-container .summary-container .continue-button:hover {
+  background: linear-gradient(0, hsl(241, 81%, 54%), hsl(252, 100%, 67%));
 }
 
 .attribution {
   font-size: 11px;
   text-align: center;
+  bottom: 5px;
+  position: absolute;
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
