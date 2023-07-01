@@ -31,8 +31,8 @@ p {
   display: flex;
   width: 740px;
   height: 515px;
-  box-shadow: 10px 10px 40px -15px hsl(241, 100%, 89%);
-  border-radius: 25px;
+  box-shadow: 10px 10px 40px -20px hsl(241, 100%, 89%);
+  border-radius: 30px;
 }
 .main-container .result-container {
   background: linear-gradient(0, hsl(241, 81%, 54%), hsl(252, 100%, 67%));
